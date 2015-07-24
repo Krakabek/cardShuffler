@@ -3,7 +3,7 @@
 <input type="button" ng-click="reverse='random';setOrder()" value="Shuffle!">
 <input type="button" ng-click="reverse='false';setOrder()" value="Unshuffle!">
 <br><br>
-<ul id="list" ng-style="{height: ((myList.length * 92) + 'px')}">
+<ul id="list" ng-style="{height: ((myList.length * 91) + 'px')}">
 	<li ng-repeat="item in myList" ng-style="{top: ((item.order * 91) + 'px')}">
 		<!-- {{$index}} - {{item.order}}. {{item.text}} -->
 		<div class="card" style="background-image:url('cards/{{item.src}}')">
