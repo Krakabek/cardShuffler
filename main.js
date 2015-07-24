@@ -108,4 +108,12 @@ angular.module('StackApp').controller('MainCtrl', function ($scope) {
 		return false;
 	}
 
+	$scope.getStyle = function(i){
+
+		var style={
+			top:Math.floor($scope.myList[i].order/13)*91 + 'px',
+			left:($scope.myList[i].order % 13)*64 + 'px'
+		}
+		return style;
+	}
 });
