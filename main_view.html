@@ -1,15 +1,11 @@
 <h1>Animate Order</h1>
-<form action="">
-	<label for="reverse">reverse = true</label><br>
-	<input type="radio" value="true" name="reverse" ng-model="reverse"><br><br>
-	<label for="reverse">reverse = false</label><br>
-	<input type="radio" value="false" name="reverse" ng-model="reverse"><br><br>
-	<label for="reverse">reverse = random (click button below to shuffle again)</label><br>
-	<input type="radio" value="random" name="reverse" ng-model="reverse">
-</form>
 <br><br>
-<input type="button" ng-click="reverse = 'random';setOrder()" value="setOrder()">
+<input type="button" ng-click="reverse='random';setOrder()" value="Shuffle!">
+<input type="button" ng-click="reverse='false';setOrder()" value="Unshuffle!">
 <br><br>
-<ul id="list" ng-style="{height: ((myList.length * 40) + 'px')}">
-	<li ng-repeat="item in myList" ng-style="{top: ((item.order * 40) + 'px')}">{{$index}} - {{item.order}}. {{item.text}}</li>
+<ul id="list" ng-style="{height: ((myList.length * 92) + 'px')}">
+	<li ng-repeat="item in myList" ng-style="{top: ((item.order * 91) + 'px')}">
+		<!-- {{$index}} - {{item.order}}. {{item.text}} -->
+		<div class="card" style="background-image:url('cards/{{item.src}}')">
+	</li>
 </ul>
