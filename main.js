@@ -63,8 +63,6 @@ angular.module('StackApp').controller('MainCtrl', function ($scope) {
 
 	$scope.setOrder = function () {
 
-		console.log('change', $scope.reverse);
-
 		if ($scope.reverse === 'random') {
 
 			var t = [];
