@@ -2,15 +2,6 @@ angular.module('StackApp', []).config(function ($routeProvider) {
 
 	'use strict';
 
-	$routeProvider
-	.when('/', {
-		templateUrl: "main_view.html",
-		controller: 'MainCtrl'
-	})
-	.otherwise({
-		redirectTo: '/'
-	});
-
 });
 
 angular.module('StackApp').controller('MainCtrl', function ($scope) {

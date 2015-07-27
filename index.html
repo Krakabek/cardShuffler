@@ -1,17 +1,29 @@
 <!doctype html>
-	<html>
-	<head>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Card Shuffler</title>
-		<meta name="viewport" content="width=device-width">
-		<link rel="stylesheet" href="style.css">
-		<script src="main.js"></script>
-	</head>
-	<body ng-app="StackApp">
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Card Shuffler</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="style.css">
+	<script src="main.js"></script>
+</head>
+<body ng-app="StackApp">
 
-		<div class="container" ng-view></div>
+<div ng-controller="MainCtrl">
+		<h1>Animate Order</h1>
+		<br><br>
+		<input type="button" ng-click="reverse='random';setOrder()" value="Shuffle!">
+		<input type="button" ng-click="reverse='false';setOrder()" value="Unshuffle!">
+		<br><br>
+		<ul id="list" ng-style="{height: ((myList.length * 91) + 'px')}">
+			<li ng-repeat="item in myList" ng-style="getStyle($index)">
+				<!-- {{$index}} - {{item.order}}. {{item.text}} -->
+				<div class="card" style="background-image:url('cards/{{item.src}}')">
+				</li>
+			</ul>
+		</div>
 
 	</body>
-</html>
+	</html>
